@@ -27,14 +27,13 @@ class App extends React.Component {
       <div>
         <h1>Hi i'm Ryan</h1>
         <div className="my-card">
-          <div>
-            {this.state.me.name}
+          <div className="my-av">
+            <img src={this.state.me.avatar_url} alt="my github avatar" />
           </div>
-          <div>
-            {this.state.me.location}
-          </div>
-          <div>
-            {this.state.me.html_url}
+          <div className="my-info">
+            <h3>{this.state.me.name}</h3>
+            <p>Location: {this.state.me.location}</p>
+            <a href={this.state.me.html_url}>Click here to check out my GitHub!</a>
           </div>
         </div>
         <FollowerList />

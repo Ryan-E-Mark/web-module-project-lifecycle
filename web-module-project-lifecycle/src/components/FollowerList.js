@@ -23,7 +23,7 @@ class FollowerList extends React.Component {
     render() {
         return(
             <div>
-                <h3>Followers in here</h3>
+                <h2>My Friends!</h2>
                 {this.state.friends.map(friend => {
                     return <Follower follower={friend} key={friend.id}/>
                 })}
