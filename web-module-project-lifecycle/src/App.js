@@ -6,15 +6,13 @@ import axios from 'axios';
 class App extends React.Component {
 
   state = {
-    me: [],
-    friends: []
+    me: []
   }
 
-  // Getting my github info
+  // Getting my github info & Followers
   componentDidMount() {
     axios.get('https://api.github.com/users/Ryan-E-Mark')
     .then(resp => {
-      console.log(resp);
       this.setState({
         ...this.state,
         me: resp.data
@@ -22,10 +20,6 @@ class App extends React.Component {
     }).catch(err => console.log(err))
   }
 
-  // Getting my github follower's info
-  componentDidMount() {
-    axios.get('https://api.github.com/users/Ryan-E-Mark/followers')
-  }
 
 
   render() {

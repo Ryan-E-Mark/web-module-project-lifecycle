@@ -1,8 +1,18 @@
 import React from 'react';
 
-const Follower = () => {
+const Follower = (props) => {
+    const { follower } = props;
+
     return(
-        <p>I am one of Ryan's followers</p>
+        <div className="follwer-card"> 
+            <img src={follower.avatar_url} alt="follower avatar" />
+            <div>
+                {follower.login}
+            </div>
+            <div>
+                {follower.html_url}
+            </div>
+        </div>
     )
 }
 
